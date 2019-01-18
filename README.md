@@ -1,9 +1,9 @@
-# ProjetDataViz20182019Groupe6.github.io
+# PaysImpactRechauffement.github.io
 Projet réalisé dans le cadre de l'UE "Data Vizualisation" du Master 2 IA de Lyon 1. 
 
 > Auteurs : Ahcene Boumhand et Julien Lacombe
 
-https://projetdataviz20182019groupe6.github.io/index.html
+https://paysimpactrechauffement.github.io
 
 ## Description de l'implémentation
 3 datasets au total ont été utilisés : 
