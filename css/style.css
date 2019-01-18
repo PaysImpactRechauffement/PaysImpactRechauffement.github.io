@@ -63,10 +63,11 @@ header {
   background-image: linear-gradient(-90deg, #ffaaaa, #b2d4ff);
   color: white;
   font-size: 30px;
+  margin-bottom: 3%;
 }
 
 footer {
-  margin-top: 2%;
+  margin-top: 3%;
   padding: 10px;
   text-align: center;
   background-image: linear-gradient(-90deg, #ffaaaa, #b2d4ff);
