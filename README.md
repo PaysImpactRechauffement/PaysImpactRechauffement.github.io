@@ -32,7 +32,7 @@ L'ensemble des scripts ayant servi au preprocessing de ces datasets est écrit e
 # PaysImpactRechauffement.github.io - english version
 <p>This project has been done during the course "<a href="https://lyondataviz.github.io/teaching/lyon1-m2/2018/">Visualisation interactive de données</a>" which is a part of the "<a href="http://master-info.univ-lyon1.fr/IA/">Master Intelligence Artificielle</a>" of the "<a href="https://www.univ-lyon1.fr/">Université Lyon 1</a>".</p>.
 
-> Authors : Ahcene Boumhand et Julien Lacombe
+Authors : Ahcene Boumhand et Julien Lacombe
 
 The corresponding website is available here : https://paysimpactrechauffement.github.io.
 
