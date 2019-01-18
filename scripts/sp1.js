@@ -67,8 +67,6 @@
           run1() ;
         }
       }
-      
-      
     }
 
     function restart1()

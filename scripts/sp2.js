@@ -53,10 +53,15 @@
         .attr("stroke", function(d) {return color(d[0].year)});
          running = false ;
          d3.select("#pause").text("Reprendre") ;
-       }
-      else{
+       } 
+       else{
         if(running == false)
-        {  d3.select("#pause").text( "Pause") ;
+          
+        { if(d3.select("#checkbox").property("checked"))
+          {
+             svg.selectAll("path.period:not([opacity ='0'])").attr("opacity",1/1000000);
+          }
+          d3.select("#pause").text( "Pause") ;
           run() ;
         }
       }
