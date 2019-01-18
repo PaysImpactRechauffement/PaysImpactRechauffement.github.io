@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Projet DataViz 2018-2019 Groupe 6</title>
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        
+        <!-- D3 -->
+        <script src='https://d3js.org/d3.v4.min.js'></script>
+    </head>
+    <body onload="global_map(); sp1(); sp2();">
+        <header>
+          <!--<h1>Visualisation des zones où le réchauffement se fait le plus ressentir et mise en perspective par rapport à l'évolution de facteurs globaux</h1>-->
+          <h1>Impact du réchauffement climatique par pays et facteurs globaux</h1>
+        </header>
+        
+        <section>
+            <h2>Pays les plus impactés en termes de température</h2>
+            <p>Cette visualisation montre pour chaque pays les écarts par rapport à la moyenne des températures en 1850/1900. Plus l'intensité de la couleur est importante et plus l'écart est grand. Il est possible de régler la date et le nombre de pays les plus impactés à afficher grâce aux curseurs. On peut également voir la valeur exacte de l'écart pour le mois courant en survolant le pays souhaité avec la souris, ainsi que le rang lorsqu'il s'agit d'un pays impacté. </p><br>
+            
+            
+            <div class="container">
+                <div class="row-sm">
+                    <label for="curseur_map">Date : <span id='mois_map'>01/02/2010</span></label><br>
+                    <input id='curseur_map'  type='range' value='1922' min='1' max='1964' step='1' /><br>
+                </div>
+                <div class="row-sm">
+                    <label for="curseur_map_top_max">Top pays les plus touchés : <span id='top_max_map'>5</span></label><br>
+                    <input id='curseur_map_top_max' type='range' value='5' min='1' max='10' step='1' />
+                    <br>
+                </div>
+                <div class="row-sm">
+                    <div id="visu_map"></div>
+                </div>
+            </div>
+            
+            <h2>Evolution de la température globale et de la concentration en CO2 dans l'atmosphère</h2>
+            <p>Cette visualisation s'intéresse à l'évolution des écarts de température (par rapport à la moyenne globale calculée avec des mesures prises entre 1850 et 1900) ainsi qu'à la concentration en CO2 (en ppm) à l'échelle globale au cours des années. Un cercle représente une année (les mois sont positionnés comme les heures dans une horloge). Le premier curseur permet de régler la rapidité de la visualisation, le second curseur permet d'avancer directement à l'année souhaitée. Cocher la case "par année" permet de ne visualiser que le trait de l'année courante (en utilisant le second curseur). En ce qui concerne la température, selon <a href="https://ec.europa.eu/clima/policies/international/negotiations/paris_fr">l'accord de Paris</a> les états se sont engagés à limiter la hausse de la température globale "nettement en dessous de <b>2°C</b>" et à "poursuivre les efforts pour limiter [cette hausse] à <b>1,5°C</b>". Cette visualisation est inspirée des travaux de <a href="https://twitter.com/ed_hawkins">Ed Hawkins</a> disponibles <a href="http://www.climate-lab-book.ac.uk/spirals/">ici</a></p><br>
+            
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm my-auto">
+                        <button class="btn btn-primary btn-lg" onclick="restart1();restart();">Lancer</button>
+                        <button class="btn btn-danger btn-lg" id = "pause" onclick="stop1();stop();" style="width:77px">Pause</button><br><br>
+
+                        <label for="slider_vitesse">Vitesse de l'animation : <span id="vitesse">20</span></label><br>
+                        <input id="slider_vitesse" type="range" value="20" min="10" max="100" step="1" /><br>
+                        
+                        <label for="slider_year">Année courante : <span id="year">1950</span></label><br>
+                        <input id="slider_year" type="range" value="1950" min="1850" max="2014" step="1" /><br>
+
+                        <input type="checkbox" id="checkbox" >
+                        <label class="form-check-label" for="checkbox">Par Année</label>
+                    </div>
+                    <div class="col-sm" id="visu_sp1"></div>
+                    <div class="col-sm" id="visu_sp2"></div>
+                </div>
+            </div>
+          
+            <h2>Informations sur les jeux de données</h2>
+            <p>Le jeu de données utilisé pour la visualisation sous forme de carte - qui contient les températures moyennes par pays et par mois - est disponible <a href="https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data">sur Kaggle</a>. Ces données ont été rassemblées par <a href="http://berkeleyearth.org/">Berkeley Earth</a>, en lien avec le <a href="https://www.lbl.gov/">laboratoire Lawrence Berkeley National Laboratory</a>.</p>
+            
+            <p>Le <a href="https://www.metoffice.gov.uk/hadobs/hadcrut4/">jeu de données des températures globales</a> utilisé provient d'une collaboration entre le <a href="https://www.metoffice.gov.uk/">Met Office Hadley Centre for Climate Science and Services</a></p> et le <a href="http://www.cru.uea.ac.uk/ ">Climate Research Unit at the University of East Anglia</a>.Ce jeu de données est basé sur les températures terrestres issues de <a href="https://www.metoffice.gov.uk/hadobs/crutem4/">ce jeu de données</a> et des températures des mers provenant d'<a href="https://www.metoffice.gov.uk/hadobs/hadsst3/">ici</a>.
+            
+            <p>Le dataset concernant les concentrations globales en CO2 dans l'atmosphère, <a href="http://climatecollege.unimelb.edu.au/cmip6">Historical Greenhouse Gas Concentrations for CMIP6</a>, a été produit par l'<a href="https://www.unimelb.edu.au/">université de Melbourne</a>.</p>
+          
+            <h2>Auteurs</h2>
+            <ul>
+                <li>Ahcene Boumhand</li>
+                <li>Julien Lacombe</li>
+            </ul><br>
+            Ce projet a été réalisé dans le cadre de l'UE <a href="https://lyondataviz.github.io/teaching/lyon1-m2/2018/">Visualisation interactive de données</a> du <a href="http://master-info.univ-lyon1.fr/IA/">Master Intelligence Artificielle</a> de l'<a href="https://www.univ-lyon1.fr/">université Lyon 1</a>.<br>
+            <script type="text/javascript" src="scripts/global_map.js"></script>
+            <script type="text/javascript" src="scripts/sp1.js"></script>
+            <script type="text/javascript" src="scripts/sp2.js"></script>
+        </section>
+    </body>
+</html>
