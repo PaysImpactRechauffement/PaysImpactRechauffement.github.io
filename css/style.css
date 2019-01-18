@@ -93,5 +93,9 @@ text {
 }
 
 #curseur_map {
-    width: 1000px;
+    width: 100%;
+}
+
+#curseur_map_top_max {
+    width: 20%;
 }

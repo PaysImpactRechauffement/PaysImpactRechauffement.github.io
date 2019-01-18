@@ -32,11 +32,11 @@
             <div class="container">
                 <div class="row-sm">
                     <label for="curseur_map">Date : <span id='mois_map'>01/02/2010</span></label><br>
-                    <input id='curseur_map'  type='range' value='1922' min='1' max='1964' step='1' /><br>
+                    <input id='curseur_map' class="custom-range" type='range' value='1922' min='1' max='1964' step='1' /><br>
                 </div>
                 <div class="row-sm">
                     <label for="curseur_map_top_max">Top pays les plus touchés : <span id='top_max_map'>5</span></label><br>
-                    <input id='curseur_map_top_max' type='range' value='5' min='1' max='10' step='1' />
+                    <input id='curseur_map_top_max' class="custom-range" type='range' value='5' min='1' max='10' step='1' />
                     <br>
                 </div>
                 <div class="row-sm">
@@ -55,10 +55,10 @@
                         <button class="btn btn-danger btn-lg" id = "pause" onclick="stop1();stop();" style="width:77px">Pause</button><br><br>
 
                         <label for="slider_vitesse">Vitesse de l'animation : <span id="vitesse">20</span></label><br>
-                        <input id="slider_vitesse" type="range" value="20" min="10" max="100" step="1" /><br>
+                        <input id="slider_vitesse" class="custom-range" type="range" value="20" min="10" max="100" step="1" /><br>
                         
                         <label for="slider_year">Année courante : <span id="year">1950</span></label><br>
-                        <input id="slider_year" type="range" value="1950" min="1850" max="2014" step="1" /><br>
+                        <input id="slider_year" class="custom-range"type="range" value="1950" min="1850" max="2014" step="1" /><br>
 
                         <input type="checkbox" id="checkbox" >
                         <label class="form-check-label" for="checkbox">Par Année</label>
