@@ -24,9 +24,8 @@ Le site correspondant est hébergé à l'adresse https://paysimpactrechauffement
 L'ensemble des scripts ayant servi au preprocessing de ces datasets est écrit en Python et est disponible sous la forme de notebooks jupyter (dossier preprocessing). </p>
 
 ## Documents relatifs au projet
-* Document de cadrage du projet : https://github.com/ProjetDataViz20182019Groupe6/ProjetDataViz20182019Groupe6.github.io/blob/master/docs/Document%20Cadrage%20Projet%20DataViz%20Lyon%201%20M2%202018-2019%20Groupe%206.pdf
-* DOcument de peer review : https://github.com/ProjetDataViz20182019Groupe6/ProjetDataViz20182019Groupe6.github.io/blob/master/docs/Document%20de%20peer-review.pdf
-
+* <a href="https://github.com/PaysImpactRechauffement/PaysImpactRechauffement.github.io/blob/master/docs/Document%20Cadrage%20Projet%20DataViz%20Lyon%201%20M2%202018-2019%20Groupe%206.pdf"> Document de cadrage du projet</a> ;
+* <a href="https://github.com/PaysImpactRechauffement/PaysImpactRechauffement.github.io/blob/master/docs/Document%20de%20peer-review.pdf">Document de peer review</a>.
 
 
 
@@ -53,6 +52,5 @@ The corresponding website is available here : https://paysimpactrechauffement.gi
 <p>The set of scripts used in the preprocessing of these datasets is written in Python and is available in the form of jupyter notebooks ("preprocessing" folder). </p>
 
 ## Project documents
-* Project framing document : https://github.com/ProjetDataViz20182019Groupe6/ProjetDataViz20182019Groupe6.github.io/blob/master/docs/Document%20Cadrage%20Projet%20DataViz%20Lyon%201%20M2%202018-2019%20Groupe%206.pdf
-* Peer review document : https://github.com/ProjetDataViz20182019Groupe6/ProjetDataViz20182019Groupe6.github.io/blob/master/docs/Document%20de%20peer-review.pdf
-
+* <a href="https://github.com/PaysImpactRechauffement/PaysImpactRechauffement.github.io/blob/master/docs/Document%20Cadrage%20Projet%20DataViz%20Lyon%201%20M2%202018-2019%20Groupe%206.pdf">Project framing document</a>
+* <a href="https://github.com/PaysImpactRechauffement/PaysImpactRechauffement.github.io/blob/master/docs/Document%20de%20peer-review.pdf">Peer review document</a>.
