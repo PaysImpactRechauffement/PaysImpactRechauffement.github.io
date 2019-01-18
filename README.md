@@ -52,5 +52,5 @@ The corresponding website is available here : https://paysimpactrechauffement.gi
 <p>The set of scripts used in the preprocessing of these datasets is written in Python and is available in the form of jupyter notebooks ("preprocessing" folder). </p>
 
 ## Project documents
-* <a href="https://github.com/PaysImpactRechauffement/PaysImpactRechauffement.github.io/blob/master/docs/Document%20Cadrage%20Projet%20DataViz%20Lyon%201%20M2%202018-2019%20Groupe%206.pdf">Project framing document</a>
+* <a href="https://github.com/PaysImpactRechauffement/PaysImpactRechauffement.github.io/blob/master/docs/Document%20Cadrage%20Projet%20DataViz%20Lyon%201%20M2%202018-2019%20Groupe%206.pdf">Project framing document</a> ;
 * <a href="https://github.com/PaysImpactRechauffement/PaysImpactRechauffement.github.io/blob/master/docs/Document%20de%20peer-review.pdf">Peer review document</a>.
